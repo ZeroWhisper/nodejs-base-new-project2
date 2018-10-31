@@ -20,7 +20,10 @@ routes.use('/app', authMiddleware);
 /**
  * User, geral para testes
  */
-routes.get('/', userController.index);
+// routes.get('/', userController.index);
+routes.get('/', (req, res) => {
+  res.redirect('/auth');
+});
 
 /**
  * Auth
